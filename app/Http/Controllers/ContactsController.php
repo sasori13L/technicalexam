@@ -37,7 +37,10 @@ class ContactsController extends Controller
             return view('contacts._list', compact('contacts'))->render();
         }
 
-        return null;
+        $user = Auth::user();
+        $contacts = $user->contacts()->paginate(10);
+
+        return view('contacts.index', compact('contacts'));
     }
 
     /**

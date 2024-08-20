@@ -40,13 +40,6 @@
                 var query = $(this).val();
                 fetch_record(query);
             });
-
-            /*$(document).on('click', '.pagination a', function (event) {
-                console.log('Test');
-                event.preventDefault();
-                var page = $(this).attr('href').split('page=')[1];
-                fetch_record($('#search').val() + '&page=' + page);
-            });*/
         });
     </script>
 @endpush
